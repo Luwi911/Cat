@@ -1,0 +1,26 @@
+.carousel{
+    margin: 100px auto;
+    height: 90%;
+    border: 5px solid red;
+    overflow-y: auto;
+    
+}
+
+.group{
+  
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card{
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background: aqua;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+
+    
+}
