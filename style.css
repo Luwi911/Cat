@@ -1,29 +1,70 @@
-.carousel{
-    margin: 100px auto;
-    height: 90%;
-    border: 5px solid red;
-    overflow-y: auto;
+body {
+    color: white;
+    background-color: black;
 }
 
-.group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    padding: 2em;
+header {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+
+  background-color: #333;
+  padding-top: 20px;
+  transform: translateX(-190px);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+
+  border-right: 4px solid rgb(135, 114, 114); 
+}
+
+.sidebar:hover {
+  transform: translateX(0);
+}
+
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.carousel {
+  margin: 100px auto;
+  height: 90%;
+  border: 5px solid white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }
 
 .card {
-    flex: 0 0 auto;
-    width: 80%;
-    min-height: 5em;
-    padding: 1em;
-    background: aqua;
-    border-radius: .2em;
-    text-align: center;
-    align-content: center;
-    margin: 1em 0;
-    position: relative;
-    overflow: hidden;
+  width: 80%;
+  text-align: center;
+  color: white;
 }
+
+
