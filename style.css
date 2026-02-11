@@ -42,6 +42,7 @@ header {
 
 .sidebar a:hover {
   background-color: #555;
+  color: yellow;
 }
 
 .header-center {
