@@ -51,6 +51,13 @@ header {
   text-align: center;
 }
 
+.Instruction{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
 
 .carousel {
   margin: 100px auto;
