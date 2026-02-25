@@ -9,9 +9,7 @@ header {
   justify-content: center;  
   align-items: center;      
   height: 100vh;
-  padding-left: 20px;
 }
-
 
 .sidebar {
   position: fixed;
@@ -60,7 +58,6 @@ header {
   align-items: center;
 }
 
-
 .carousel {
   margin: 100px auto;
   height: 90%;
@@ -77,19 +74,96 @@ header {
   color: white;
 }
 
-.Instruction {
-  position: relative;
+/* Chapter 1 CSS */
+#chapter1 .content {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;   
-  align-items: center;          
-  text-align: center;
-  background-image: url("images/insturction_bg.png");
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-top: 200px;          
+  flex-direction: row;
+}
+#chapter1 .images {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#chapter1 .images img {
+  flex: 1;
+}
+#chapter1 .text {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  #chapter1 .content {
+    flex-direction: column;
+  }
+}
+
+/* Chapter 2 CSS */
+#chapter2 .content {
+  display: flex;
+  flex-direction: row;
+}
+#chapter2 .images {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#chapter2 .images img {
+  flex: 1;
+}
+#chapter2 .text {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  #chapter2 .content {
+    flex-direction: column;
+  }
+}
+
+/* Chapter 3 CSS */
+#chapter3 .content {
+  display: flex;
+  flex-direction: row;
+}
+#chapter3 .images {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#chapter3 .images img {
+  flex: 1;
+}
+#chapter3 .text {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  #chapter3 .content {
+    flex-direction: column;
+  }
+}
+
+/* Chapter 4 CSS */
+#chapter4 .content {
+  display: flex;
+  flex-direction: row;
+}
+#chapter4 .images {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#chapter4 .images img {
+  flex: 1;
+}
+#chapter4 .text {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  #chapter4 .content {
+    flex-direction: column;
+  }
 }
 
 .choice-buttons {
@@ -99,18 +173,16 @@ header {
   gap: 80px;
 }
 
-/* 通用按钮 */
 .image-btn {
   display: block;
   width: 350px;
   height: 120px;
-  background-image: url("images/test.png");
+  background-image: url("images/scroll-buttons.png");
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* 悬停效果 */
 .image-btn:hover {
   transform: scale(1.08);
   filter: brightness(1.2);
@@ -118,4 +190,13 @@ header {
 
 .image-btn:active {
   transform: scale(0.98);
+}
+
+.scroll-img {
+  width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-img:hover {
+  transform: scale(1.08);
 }
