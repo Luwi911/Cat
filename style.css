@@ -92,4 +92,30 @@ header {
   padding-top: 200px;          
 }
 
+.choice-buttons {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
 
+/* 通用按钮 */
+.image-btn {
+  display: block;
+  width: 350px;
+  height: 120px;
+  background-image: url("images/test.png");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 悬停效果 */
+.image-btn:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+.image-btn:active {
+  transform: scale(0.98);
+}
