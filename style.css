@@ -109,6 +109,35 @@ header {
   padding: 2rem 1rem; 
 }
 
+.Play {
+  text-align: center;  
+  overflow: visible;   
+  margin: 3rem auto;    /* 添加上下外边距 */
+}
+
+.Play a {
+  display: inline-block;  /* 确保链接包裹内容时正确显示 */
+  text-decoration: none;  /* 移除下划线 */
+}
+
+.start-img {
+  width: 100px;
+  height: 100px;
+  display: block;    
+  margin: 0 auto;
+  transition: filter 0.3s ease, transform 0.3s ease;  /* 将transition移到这里 */
+}
+
+.start-img:hover {
+  filter: brightness(0.7);  /* 悬停变暗 */
+  transform: scale(1.08);   /* 悬停放大 */
+}
+
+.Play a:active .start-img {  /* 修改这里：点击图片时效果 */
+  filter: brightness(0.5);  /* 点击时更暗 */
+  transform: scale(0.98);   /* 点击时缩小 */
+}
+
 .card {
   width: 60%;
   margin: 120px auto;
@@ -207,37 +236,11 @@ header {
   }
 }
 
-.choice-buttons {
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-}
-
-.image-btn {
-  display: block;
-  width: 350px;
-  height: 120px;
-  background-image: url("images/scroll-buttons.png");
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.image-btn:hover {
+.scroll-img:hover {
   transform: scale(1.08);
-  filter: brightness(1.2);
-}
-
-.image-btn:active {
-  transform: scale(0.98);
 }
 
 .scroll-img {
   width: 350px;
   transition: transform 0.3s ease;
-}
-
-.scroll-img:hover {
-  transform: scale(1.08);
 }
