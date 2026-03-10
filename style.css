@@ -112,12 +112,12 @@ header {
 .Play {
   text-align: center;  
   overflow: visible;   
-  margin: 3rem auto;  
+  margin: 3rem auto;    /* 添加上下外边距 */
 }
 
 .Play a {
-  display: inline-block;  
-  text-decoration: none;  
+  display: inline-block;  /* 确保链接包裹内容时正确显示 */
+  text-decoration: none;  /* 移除下划线 */
 }
 
 .start-img {
@@ -125,21 +125,21 @@ header {
   height: 100px;
   display: block;    
   margin: 0 auto;
-  transition: filter 0.3s ease, transform 0.3s ease;  
+  transition: filter 0.3s ease, transform 0.3s ease;  /* 将transition移到这里 */
 }
 
 .start-img:hover {
-  filter: brightness(0.7);  
-  transform: scale(1.08);   
+  filter: brightness(0.7);  /* 悬停变暗 */
+  transform: scale(1.08);   /* 悬停放大 */
 }
 
-.Play a:active .start-img {  
-  filter: brightness(0.5);  
-  transform: scale(0.98);  
-} 
+.Play a:active .start-img {  /* 修改这里：点击图片时效果 */
+  filter: brightness(0.5);  /* 点击时更暗 */
+  transform: scale(0.98);   /* 点击时缩小 */
+}
 
 .card {
-  width: 60%;
+  width: 80%;
   margin: 120px auto;
   text-align: center;
 }
