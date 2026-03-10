@@ -41,7 +41,14 @@ header {
 
 .sidebar a:hover {
   background-color: #555;
-  color: yellow;
+  color: rgb(243, 212, 13);
+  border-left:solid;
+  border-left-color: blue;
+  border-left-width: 5px;
+  border-left-style: inset;
+  border-radius:0 10px 10px 0;
+  font-size: 1.2em; 
+  transition: font-size 0.3s ease;
 }
 
 .header-center {
@@ -100,13 +107,13 @@ header {
 }
 
 .carousel {
-  margin: 100px auto;
+  margin: 40px auto;
   border: 5px solid white;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem; 
+  padding: 1rem 1rem; 
 }
 
 .Play {
@@ -140,7 +147,7 @@ header {
 
 .card {
   width: 80%;
-  margin: 120px auto;
+  margin: 40px auto;
   text-align: center;
 }
 
@@ -237,10 +244,17 @@ header {
 }
 
 .scroll-img:hover {
-  transform: scale(1.08);
+  filter: brightness(0.7);  
+  transform: scale(1.08); 
 }
 
 .scroll-img {
-  width: 350px;
+  width: 200px;
   transition: transform 0.3s ease;
+  margin:20px;
+}
+.choice-buttons{
+  display:flex;
+  justify-content: space-around;
+  margin-top:100px;
 }
