@@ -112,7 +112,7 @@ header {
 .Play {
   text-align: center;  
   overflow: visible;   
-  margin: 3rem auto;  
+  margin: 3rem auto;   
 }
 
 .Play a {
@@ -130,16 +130,16 @@ header {
 
 .start-img:hover {
   filter: brightness(0.7);  
-  transform: scale(1.08);   
+  transform: scale(1.08);  
 }
 
 .Play a:active .start-img {  
-  filter: brightness(0.5);  
+  filter: brightness(0.5); 
   transform: scale(0.98);  
-} 
+}
 
 .card {
-  width: 60%;
+  width: 80%;
   margin: 120px auto;
   text-align: center;
 }
