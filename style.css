@@ -185,9 +185,27 @@ header {
   display: flex;
   flex-direction: row;
 }
-#chapter2 .images img {
+#chapter2 .image-container {
+  position: relative;
   flex: 1;
 }
+#chapter2 .images img {
+  width: 100%;
+  height: auto;
+}
+#chapter2 .overlay-button {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#chapter2 .left-button {
+  left: 25%;
+}
+#chapter2 .right-button {
+  left: 75%;
+}
+
 #chapter2 .text {
   flex: 1;
 }
