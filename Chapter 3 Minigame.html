@@ -3,34 +3,352 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Title of the page</title>
+    <title>Chapter 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            padding-left: 10px;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 200px;
+            background-color: #333;
+            padding-top: 20px;
+            transform: translateX(-190px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            border-right: 4px solid rgb(135, 114, 114); 
+        }
+
+        .sidebar:hover {
+            transform: translateX(0);
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+            color: rgb(243, 212, 13);
+            border-left: solid;
+            border-left-color: blue;
+            border-left-width: 5px;
+            border-left-style: inset;
+            border-radius: 0 10px 10px 0;
+            font-size: 1.2em; 
+            transition: font-size 0.3s ease;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
+            height: 100vh;
+        }
+
+        .header-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header-center h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-center img {
+            max-width: 200px;
+        }
+
+        .carousel {
+              margin: 40px auto;
+              border: 5px solid white;
+              overflow-y: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 1rem 1rem; 
+        }
+
+        .card {
+              width: 80%;
+              margin: 40px auto;
+              text-align: center;
+        }
+
+        .scroll-img {
+            width: 200px;
+            transition: transform 0.3s ease;
+            margin: 20px;
+        }
+
+        .scroll-img:hover {
+            filter: brightness(0.7);  
+            transform: scale(1.08); 
+        }
+
+        .hidden-text-background-card {
+            margin: 40px auto;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 3 / 2;
+            background: url('test.png') no-repeat center/cover; /*在这里更改图片*/
+            background-blend-mode: overlay;
+            border-radius: 30px 30px 15px 15px;
+            padding: 35px 20px 30px 20px;
+            position: relative;
+        }
+
+        .hidden-text-background-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.65));
+            border-radius: 32px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hidden-text-background-card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hidden-text-background-card p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin: 18px 0;
+            color: #faf0df;
+        }
+
+        .hidden-word {
+            filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 0 8px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: filter 0.25s ease, background 0.2s, transform 0.1s;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            margin: 0 3px;
+            user-select: none;
+            box-shadow: inset 0 0 2px rgba(255, 200, 0, 0.3);
+        }
+
+        .hidden-word.revealed {
+            filter: blur(0);
+            background-color: rgba(180, 130, 70, 0.8);
+            color: #fff2cf;
+            text-shadow: 0 0 3px #000;
+            box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+        }
+
+        .hidden-sentence {
+            filter: blur(6px);
+            background: rgba(35, 30, 45, 0.85);
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-style: italic;
+            margin: 0 4px;
+        }
+
+        .hidden-sentence.revealed {
+            filter: blur(0);
+            background: rgba(150, 110, 60, 0.85);
+            color: #fff2cf;
+            padding: 4px 14px;
+        }
+
+        .reveal-hint-text {
+            font-size: 0.85rem;
+            color: #ffcf8a;
+            margin-top: 12px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+        }
+
+        .reveal-all-btn {
+            background: linear-gradient(95deg, #6a4e2e, #3e2a1a);
+            border: none;
+            color: #ffecb3;
+            padding: 10px 28px;
+            margin-top: 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+        }
+
+        .reveal-all-btn:hover {
+            background: linear-gradient(95deg, #8b6840, #5e4124);
+            transform: scale(1.02);
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        @keyframes softPulse {
+            0% {
+                border-color: rgba(230, 180, 80, 0.3);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            }
+            100% {
+                border-color: rgba(230, 180, 80, 0.7);
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7), 0 0 6px rgba(255, 200, 100, 0.2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hidden-text-background-card {
+                padding: 20px 18px;
+            }
+            .hidden-text-background-card h3 {
+                font-size: 1.5rem;
+            }
+            .hidden-word, .hidden-sentence {
+                font-size: 0.9rem;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 <header>
-  <nav class="sidebar">
-    <img src="" alt="logo">
-    <a href="index.html">Instruction</a>
-    <a href="Chapter 1 main.html">Chapter 1</a>
-    <a href="Chapter 2 main.html">Chapter 2</a>
-    <a href="Chapter 3 main.html">Chapter 3</a>
-  </nav>
+    <nav class="sidebar">
+        <img src="" alt="logo">
+        <a href="index.html">Instruction</a>
+        <a href="Chapter 1 main.html">Chapter 1</a>
+        <a href="Chapter 2 main.html">Chapter 2</a>
+        <a href="Chapter 3 main.html">Chapter 3</a>
+    </nav>
 
-  <div class="header-center">
-    <h1>Title</h1>
-    <img src="a.png" alt="header image">
-  </div>
-
+    <div class="header-center">
+        <h1>Title</h1>
+        <img src="a.png" alt="header image">
+    </div>
 </header>
 
 <div class="carousel">
-<div>
-    <a href="Chapter 2 main.html"><img src="images/nextchapter.png" class="scroll-img"></a>
+    <div class="card">
+        <div class="hidden-text-background-card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               <span class="hidden-word" data-revealed="false">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+               reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+               nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+               sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+               reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+               nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+               sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <span class="reveal-hint-text">Click on the blurred text above.</span>
+        </div>
+        <a href="Chapter 2 main.html"><img src="images/nextchapter.png" class="scroll-img" alt="next chapter"></a>
+
+    </div>
 </div>
-</div>
+
+<script>
+    const hiddenWords = document.querySelectorAll('.hidden-word');
+    const hiddenSentences = document.querySelectorAll('.hidden-sentence');
+    
+    function revealElement(el) {
+        if (!el.classList.contains('revealed')) {
+            el.classList.add('revealed');
+            el.setAttribute('data-revealed', 'true');
+            el.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                if (el) el.style.transform = '';
+            }, 150);
+        }
+    }
+    
+
+    hiddenWords.forEach(word => {
+        word.addEventListener('click', (e) => {
+            e.stopPropagation();
+            revealElement(word);
+        });
+        word.style.cursor = 'pointer';
+        word.setAttribute('title', 'Click to show hidden content');
+    });
+    
+    hiddenSentences.forEach(sentence => {
+        sentence.addEventListener('click', (e) => {
+            e.stopPropagation();
+            revealElement(sentence);
+        });
+        sentence.style.cursor = 'pointer';
+        sentence.setAttribute('title', 'Click to show hidden content');
+    });
+    
+    
+    const bgCard = document.querySelector('.hidden-text-background-card');
+    if (bgCard) {
+        bgCard.style.opacity = '0';
+        bgCard.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+            bgCard.style.transition = 'opacity 0.6s ease, transform 0.4s ease';
+            bgCard.style.opacity = '1';
+            bgCard.style.transform = 'translateY(0)';
+        }, 100);
+    }
+    
+    const allHiddenItems = [...hiddenWords, ...hiddenSentences];
+    allHiddenItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            if (!item.classList.contains('revealed')) {
+                item.style.filter = 'blur(3px)';
+            }
+        });
+        item.addEventListener('mouseleave', () => {
+            if (!item.classList.contains('revealed')) {
+                item.style.filter = 'blur(5px)';
+            } else {
+                item.style.filter = 'blur(0)';
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>
