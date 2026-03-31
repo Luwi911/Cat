@@ -213,6 +213,31 @@
             letter-spacing: 1px;
         }
 
+.puzzle-feedback {
+    margin: 20px auto;              
+    display: flex;                  
+    justify-content: center;       
+    align-items: center;            
+
+    width: fit-content;
+    max-width: 80%;
+
+    background: rgba(20, 12, 3, 0.9);
+    border-radius: 60px;
+    padding: 16px 35px;             
+    
+    font-size: 1.6rem;           
+    font-weight: bold;             
+    color: #ffdead;
+    text-align: center;
+    letter-spacing: 1.2px;
+
+    border: 2px solid #c9a24b;
+    box-shadow: 0 4px 0 #61471e;
+
+    backdrop-filter: blur(2px);
+}
+
         @keyframes softPulse {
             0% {
                 border-color: rgba(230, 180, 80, 0.3);
@@ -278,8 +303,8 @@
                sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
-        <div style="text-align: center; margin-top: 10px;">
-            <span class="reveal-hint-text">Click on the blurred text above.</span>
+        <div class="puzzle-feedback">
+            Click on the blurred text above.
         </div>
         <a href="Chapter 4 main.html"><img src="images/nextchapter.png" class="scroll-img" alt="next chapter"></a>
 
