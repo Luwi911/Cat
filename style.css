@@ -2,6 +2,7 @@ body {
     color: white;
     background-color: black;
     padding-left: 10px;
+    font-family: Bodoni, serif;
 }
 
 header {
@@ -9,6 +10,7 @@ header {
   justify-content: center;  
   align-items: center;      
   height: 100vh;
+  font-family: Bodoni, serif;
 }
 
 .sidebar {
@@ -23,7 +25,6 @@ header {
   transform: translateX(-190px);
   transition: transform 0.3s ease;
   z-index: 1000;
-
   border-right: 4px solid rgb(135, 114, 114); 
 }
 
@@ -41,9 +42,9 @@ header {
 
 .sidebar a:hover {
   background-color: #555;
-  color: rgb(243, 212, 13);
+  color: rgb(184, 0, 212);
   border-left:solid;
-  border-left-color: blue;
+  border-left-color: rgb(101, 0, 98);
   border-left-width: 5px;
   border-left-style: inset;
   border-radius:0 10px 10px 0;
@@ -164,6 +165,8 @@ header {
 }
 #chapter1 .images img {
   flex: 1;
+  max-width: 250px;
+  max-height: 250px;
 }
 #chapter1 .text {
   flex: 1;
@@ -228,6 +231,8 @@ header {
 }
 #chapter3 .images img {
   flex: 1;
+  max-width: 250px;
+  max-height: 250px;
 }
 #chapter3 .text {
   flex: 1;
@@ -251,6 +256,8 @@ header {
 }
 #chapter4 .images img {
   flex: 1;
+  max-width: 250px;
+  max-height: 250px;
 }
 #chapter4 .text {
   flex: 1;
