@@ -77,14 +77,13 @@
 
 
         .game-container {
-            background: rgba(255,248,225,0.95);
-            border-radius: 28px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,200,0.8);
+            background: black;
+            border-radius: 0;
+            box-shadow: none;
             padding: 20px 24px 32px;
             max-width: 800px;
             width: 100%;
             transition: all 0.2s ease;
-            backdrop-filter: blur(1px);
         }
 
         .header-stats {
@@ -106,10 +105,7 @@
         h1 {
             margin: 0;
             font-size: 1.8rem;
-            background: linear-gradient(135deg, #e67e22, #d35400);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            color: #a220b0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.05);
             letter-spacing: -0.5px;
         }
@@ -120,17 +116,17 @@
         }
 
         .score-area {
-            background: #2c2e3a;
+            background: black;
             padding: 6px 18px;
-            border-radius: 100px;
-            color: #FFE6C7;
+            border-radius: 0;
+            color: white;
             font-weight: bold;
             font-size: 1.5rem;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 3px 6px rgba(0,0,0,0.1);
+            box-shadow: none;
         }
 
         .score-area span {
-            color: #F7B05E;
+            color: white;
             font-size: 1.9rem;
             margin-right: 4px;
         }
@@ -144,21 +140,21 @@
             display: flex;
             justify-content: space-between;
             font-size: 0.75rem;
-            color: #7b5a3b;
+            color: white;
             font-weight: 600;
             margin-bottom: 6px;
             padding: 0 4px;
         }
 
         .progress-bar-bg {
-            background: #d9c5a7;
-            border-radius: 60px;
+            background: black;
+            border-radius: 0;
             height: 64px;
-            box-shadow: inset 0 3px 8px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,210,0.6);
+            box-shadow: none;
             position: relative;
             cursor: pointer;
             overflow: visible;
-            border: 2px solid #f7e5c2;
+            border: 2px solid #a220b0;
         }
 
         .rolling-pointer {
@@ -168,7 +164,7 @@
             height: 0;
             border-left: 18px solid transparent;
             border-right: 18px solid transparent;
-            border-top: 32px solid #f39c12;
+            border-top: 32px solid #a220b0;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
             transition: left 0.02s linear; 
             z-index: 15;
@@ -189,10 +185,9 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            background: #ff9068;
-            background: linear-gradient(135deg, #FF9068, #FD6E3A);
-            border-radius: 40px;
-            box-shadow: inset 0 1px 2px rgba(255,255,200,0.8), 0 0 0 2px #ffdd99;
+            background: #a220b0;
+            border-radius: 0;
+            box-shadow: none;
             opacity: 0.95;
             transition: left 0.1s ease;
             z-index: 5;
@@ -207,7 +202,7 @@
             height: 100%;
             z-index: 20;
             cursor: pointer;
-            border-radius: 60px;
+            border-radius: 0;
         }
 
         .cats-gallery {
@@ -220,20 +215,20 @@
 
         .cat-card {
             flex: 1;
-            background: #fff6ea;
-            border-radius: 48px;
+            background: black;
+            border-radius: 0;
             padding: 12px 8px;
             text-align: center;
             transition: all 0.2s;
-            box-shadow: 0 6px 0 #c29b6b;
-            border: 1px solid #ffd8a5;
+            box-shadow: none;
+            border: 2px solid #a220b0;
         }
 
         .cat-card.saved {
-            background: #b9f6ca;
-            box-shadow: 0 3px 0 #2e7d32;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-            transform: translateY(2px);
+            background: #a220b0;
+            box-shadow: none;
+            filter: none;
+            transform: none;
         }
 
         .cat-avatar {
@@ -245,20 +240,21 @@
             font-weight: bold;
             margin-top: 6px;
             font-size: 0.9rem;
-            color: #563e1f;
+            color: white;
         }
 
         .cat-status {
             font-size: 0.7rem;
-            background: #ffdfb8;
+            background: black;
             display: inline-block;
             padding: 2px 12px;
-            border-radius: 30px;
+            border-radius: 0;
             margin-top: 8px;
+            color: white;
         }
 
         .cat-card.saved .cat-status {
-            background: #5cb85c;
+            background: black;
             color: white;
         }
 
@@ -268,15 +264,15 @@
         }
 
         .next-btn {
-            background: #e67e22;
+            background: #a220b0;
             border: none;
             padding: 14px 28px;
             font-size: 1.25rem;
             font-weight: bold;
-            border-radius: 60px;
+            border-radius: 0;
             color: white;
             cursor: pointer;
-            box-shadow: 0 8px 0 #b45f1b;
+            box-shadow: none;
             transition: 0.07s linear;
             width: 100%;
             max-width: 280px;
@@ -284,8 +280,8 @@
         }
 
         .next-btn:active {
-            transform: translateY(3px);
-            box-shadow: 0 4px 0 #b45f1b;
+            transform: none;
+            box-shadow: none;
         }
 
         .next-btn.disabled-btn {
@@ -299,18 +295,18 @@
             margin-top: 16px;
             font-size: 1rem;
             font-weight: 500;
-            color: #ad5f2a;
-            background: #fbe9c3;
+            color: #a220b0;
+            background: #a220b0;
             display: inline-block;
             padding: 6px 20px;
-            border-radius: 40px;
+            border-radius: 0;
         }
 
         footer {
             font-size: 0.7rem;
             text-align: center;
             margin-top: 20px;
-            color: #aa8b62;
+            color: white;
         }
 
         @media (max-width: 560px) {
@@ -326,7 +322,7 @@
             .rolling-pointer {
                 border-left: 14px solid transparent;
                 border-right: 14px solid transparent;
-                border-top: 26px solid #f39c12;
+                border-top: 26px solid #a220b0;
                 top: -10px;
             }
             .rolling-pointer::after {
@@ -364,8 +360,8 @@
 
     <div class="track-section">
         <div class="track-label">
-            
-            <span>Orange zone = Time to rescue time</span>
+            <span>Pointer scroll area</span>
+            <span>Purple zone = Rescue time</span>
         </div>
         <div class="progress-bar-bg" id="progressBarBg">
             <div id="targetZone" class="target-zone" style="left: 30%; width: 18%;"></div>
@@ -399,7 +395,7 @@
 
     <div class="action-buttons">
         <button id="actionBtn" class="next-btn disabled-btn">Wait to save the cat</button>
-        <div id="infoMessage" class="result-message">Click when it's in the orange zone.</div>
+        <div id="infoMessage" class="result-message">Click when the pointer is in the purple area to save the cat!</div>
     </div>
 </div>
 </div>

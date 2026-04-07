@@ -64,7 +64,7 @@
             flex-direction: column;
             align-items: center;
             padding: 1rem;
-            background: #1a1a1a;
+            background: black;
         }
         .card {
             width: 80%;
@@ -100,9 +100,9 @@
             height: 1536px;
             background: url('images/bookshelf(test).png') no-repeat center/contain; /*在这里更改图片*/
             background-blend-mode: overlay;
-            border: 8px solid #ab8e6a;
-            border-radius: 30px 30px 15px 15px;
-            box-shadow: inset 0 0 0 2px #e3c184, 0 15px 25px rgba(0,0,0,0.7);
+            border: 8px solid #a220b0;
+            border-radius: 0;
+            box-shadow: none;
             padding: 35px 20px 30px 20px;
             position: relative;
         }
@@ -112,9 +112,9 @@
             position: absolute;
             top: 25px; left: 15px; right: 15px;
             height: 12px;
-            background: linear-gradient(145deg, #c7a15e, #8b6239);
-            border-radius: 10px;
-            box-shadow: 0 2px 5px #3f2e18;
+            background: #a220b0;
+            border-radius: 0;
+            box-shadow: none;
             z-index: 1;
         }
 
@@ -123,9 +123,9 @@
             position: absolute;
             bottom: 30px; left: 20px; right: 20px;
             height: 8px;
-            background: #b48b54;
-            border-radius: 4px;
-            box-shadow: 0 0 0 2px #4f3a1f;
+            background: #a220b0;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         
@@ -167,20 +167,20 @@
         
         .book-item:hover {
             transform: scale(1.07) translateY(-4px);
-            filter: drop-shadow(0 0 10px gold);
+            filter: drop-shadow(0 0 10px #a220b0);
 
         }
         .book-item:hover .book-spine {
-            border: 3px solid #ffd966;
+            border: 3px solid #a220b0;
             border-top: none;
-            border-right: 4px solid #ffd966;
-            box-shadow: 0 0 18px #ffbf00, inset 0 0 8px #fff7c0;
+            border-right: 4px solid #a220b0;
+            box-shadow: 0 0 18px #a220b0, inset 0 0 8px #a220b0;
             transition: 0.1s;
         }
 
         .book-item.correct-hit .book-spine {
-            border: 4px solid #6eff6e;
-            box-shadow: 0 0 25px #32ff32, inset 0 0 10px white;
+            border: 4px solid #a220b0;
+            box-shadow: 0 0 25px #a220b0, inset 0 0 10px #a220b0;
         }
 
         .book-item.disabled-book {
@@ -203,33 +203,33 @@
         }
 
         .puzzle-feedback {
-            background: rgba(20, 12, 3, 0.9);
-            border-radius: 60px;
+            background: black;
+            border-radius: 0;
             padding: 12px 25px;
             font-size: 1.3rem;
-            color: #ffdead;
+            color: white;
             text-align: center;
             letter-spacing: 1px;
-            border: 2px solid #c9a24b;
-            backdrop-filter: blur(2px);
+            border: 2px solid #a220b0;
+            backdrop-filter: none;
             width: fit-content;
             max-width: 80%;
-            box-shadow: 0 4px 0 #61471e;
+            box-shadow: none;
             pointer-events: none;
         }
 
         .puzzle-feedback.success {
-            background: rgba(40, 80, 30, 0.95);
-            border-color: #6eff6e;
-            color: #ffffff;
-            box-shadow: 0 4px 0 #2a5a1e;
+            background: #a220b0;
+            border-color: #a220b0;
+            color: white;
+            box-shadow: none;
         }
 
         .puzzle-feedback.error {
-            background: rgba(120, 30, 30, 0.95);
-            border-color: #ff6e6e;
-            color: #ffffff;
-            box-shadow: 0 4px 0 #8a2a2a;
+            background: #a220b0;
+            border-color: #a220b0;
+            color: white;
+            box-shadow: none;
         }
 
         .puzzle-controls {
@@ -240,13 +240,13 @@
         }
 
         .shelf-reset-btn {
-            background: #3a2c1c;
+            background: #a220b0;
             border: none;
-            color: #ffddbb;
+            color: white;
             font-size: 1.2rem;
             padding: 8px 25px;
-            border-radius: 40px;
-            border-bottom: 5px solid #61471e;
+            border-radius: 0;
+            border-bottom: 5px solid #a220b0;
             cursor: pointer;
             font-weight: bold;
             letter-spacing: 2px;
@@ -258,14 +258,14 @@
             border-bottom-width: 2px;
         }
         .puzzle-hint {
-            color: #f7d86c;
+            color: #ffffff;
             font-size: 1rem;
             margin-top: 5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-shadow: none;
         }
 
         .hidden-content {
-            border-radius: 40px;
+            border-radius: 0;
             padding: 30px 20px;
             margin: 30px auto 20px;
             opacity: 0;
@@ -281,18 +281,18 @@
             overflow: visible;
         }
         .hidden-content h2 {
-            color: #f7d86c;
+            color: #a220b0;
             font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 0 0 8px gold;
+            text-shadow: none;
         }
         .hidden-content .next-chapter-suggestion {
             display: inline-block;
             margin-top: 20px;
-            background: #8b6c45;
+            background: #a220b0;
             padding: 15px 40px;
-            border-radius: 50px;
-            border-bottom: 6px solid #4d3a25;
+            border-radius: 0;
+            border-bottom: 6px solid #a220b0;
             color: white;
             font-size: 1.8rem;
             text-decoration: none;
@@ -337,7 +337,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
                     sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <p>The six books on the bookshelf are hidden in a specific order. You need to click on the books in the correct order:<strong style="color:#f7d86c;">3 → 1 → 4 → 2 → 6 → 5</strong></p>
+                <p>The six books on the bookshelf are hidden in a specific order. You need to click on the books in the correct order:<strong style="color:#a220b0;">3 → 1 → 4 → 2 → 6 → 5</strong></p>
             </div>
         </div>
 

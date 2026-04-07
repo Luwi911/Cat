@@ -134,31 +134,33 @@
             font-size: 1.15rem;
             line-height: 1.6;
             margin: 18px 0;
-            color: white;
+            color: #faf0df;
         }
 
         .hidden-word {
             filter: blur(5px);
-
+            background-color: rgba(0, 0, 0, 0.7);
             display: inline-block;
             padding: 0 8px;
             border-radius: 20px;
             cursor: pointer;
             transition: filter 0.25s ease, background 0.2s, transform 0.1s;
-            /*font-weight: 600;*/
-            /*letter-spacing: 0.8px;*/
+            font-weight: 600;
+            letter-spacing: 0.8px;
             margin: 0 3px;
             user-select: none;
-
+            box-shadow: inset 0 0 2px rgba(255, 200, 0, 0.3);
         }
 
         .hidden-word.revealed {
-            /*filter: blur(0);*/
-            /*background-color: rgba(180, 130, 70, 0.8);*/
-            color: white;
+            filter: blur(0);
+            background-color: rgba(207, 33, 210, 0.841);
+            color: #f0e6ff;
+            text-shadow: 0 0 3px #000;
+            box-shadow: 0 0 6px rgba(147, 112, 219, 0.5);
         }
 
-        /*.hidden-sentence {
+        .hidden-sentence {
             filter: blur(6px);
             background: rgba(35, 30, 45, 0.85);
             display: inline-block;
@@ -172,10 +174,10 @@
 
         .hidden-sentence.revealed {
             filter: blur(0);
-            background: rgba(150, 110, 60, 0.85);
-            color: #fff2cf;
+            background: rgba(138, 43, 226, 0.85);
+            color: #f0e6ff;
             padding: 4px 14px;
-        }*/
+        }
 
         .reveal-hint-text {
             font-size: 0.85rem;
@@ -192,7 +194,7 @@
         .reveal-all-btn {
             background: linear-gradient(95deg, #6a4e2e, #3e2a1a);
             border: none;
-            color: #ffecb3;
+            color: #ffffff;
             padding: 10px 28px;
             margin-top: 20px;
             border-radius: 50px;
@@ -220,20 +222,15 @@
     width: fit-content;
     max-width: 80%;
 
-    background: rgba(20, 12, 3, 0.9);
-    border-radius: 60px;
-    padding: 16px 35px;             
+    border-radius: 10px;
+    padding: 10px 20px;             
     
-    font-size: 1.6rem;           
-    font-weight: bold;             
-    color: #ffdead;
+    font-size: 1rem;           
+    font-family: bodoni, serif;        
+    color: #ffffff;
     text-align: center;
-    letter-spacing: 1.2px;
 
-    border: 2px solid #c9a24b;
-    box-shadow: 0 4px 0 #61471e;
-
-    backdrop-filter: blur(2px);
+    border: 2px solid rgba(207, 0, 207, 0.859);
 }
 
         @keyframes softPulse {
