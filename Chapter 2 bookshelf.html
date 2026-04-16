@@ -98,7 +98,7 @@
             width: 1024px;
             margin: 40px auto;
             height: 1536px;
-            background: url('images/bookshelf(test).png') no-repeat center/contain; /*在这里更改图片*/
+            background: url('images/bookshelf(test).png') no-repeat center/contain; 
             background-blend-mode: overlay;
             border: 8px solid #a220b0;
             border-radius: 0;
@@ -374,7 +374,7 @@
 <script>
     (function() {
 
-        const CORRECT_ORDER = [3, 1, 4, 2, 6, 5];   // 书本控制顺序
+        const CORRECT_ORDER = [3, 1, 4, 2, 6, 5];   
         const TOTAL_BOOKS = 6;
 
         let currentStep = 0;            
@@ -395,7 +395,7 @@
                 
                 const bookImg = document.createElement('img');
                 bookImg.className = 'book-image';
-                bookImg.src = `images/book-${i}.png`;  //书本文件命名
+                bookImg.src = `images/book-${i}.png`;  
                 bookImg.alt = `Book ${i}`;
                 
                 bookDiv.appendChild(bookImg);
