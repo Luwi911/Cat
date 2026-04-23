@@ -95,10 +95,10 @@
         }
 
         .bookshelf-puzzle {
-            width: 1024px;
+            width: 775px;
             margin: 40px auto;
-            height: 1536px;
-            background: url('images/bookshelf(test).png') no-repeat center/contain; /*在这里更改图片*/
+            height: 1089px;
+            background: url('images/bookshelf.png') no-repeat center/contain; 
             background-blend-mode: overlay;
             border: 8px solid #a220b0;
             border-radius: 0;
@@ -148,40 +148,46 @@
         }
         
         .book-item:nth-child(1) { 
-            top: 182.5px; left: 157px; 
-            width:44px;
-            height: 168px;
+            top: 150px; left: 170px; 
+            width:52px;
+            height: 135px;
             border-radius: 10px;
         }
 
     
-        .book-item:nth-child(2) { top: 170.5px; left: 394.5px;
-                                  width: 47px;
-                                  height: 181px;
-                                  border-radius: 10px;
-         }
-        .book-item:nth-child(3) { top: 400px; left: 191px;
-                                  width:54px;
-                                  height:204px;
-                                  border-radius: 10px;
+        .book-item:nth-child(2) { 
+            top: 372px; left: 300px;
+            width: 50px;
+            height: 142px;
+            border-radius: 10px;
          }
 
-        .book-item:nth-child(4) { top: 410px; left: 459px;
-                                  width:42px;
-                                  height:190px;
-                                  border-radius:10px;
+        .book-item:nth-child(3) { 
+            top: 368px; left: 545px;
+            width:52px;
+            height:138px;
+            border-radius: 10px;
+         }
+
+        .book-item:nth-child(4) { 
+            top: 585px; left: 170px;
+            width:48px;
+            height:136px;
+            border-radius:10px;
         }
 
-        .book-item:nth-child(5) { top: 653px; left: 831px;
-                                  width:45px;
-                                  height:199px;
-                                  border-radius:10px;
+        .book-item:nth-child(5) { 
+            top: 585px; left: 550px;
+            width:48px;
+            height:136px;
+            border-radius:10px;
          }
  
-        .book-item:nth-child(6) { top: 1300px; left: 474px;
-                                  width:163px;
-                                  height:46px;
-                                  border-radius:10px;
+        .book-item:nth-child(6) { 
+            top: 850px; left: 325px;
+            width:49px;
+            height:136px;
+            border-radius:10px;
          }
 
         
@@ -360,7 +366,7 @@
                     nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
                     sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <p>The six books on the bookshelf are hidden in a specific order. You need to click on the books in the correct order:<strong style="color:#a220b0;">3 → 1 → 4 → 2 → 6 → 5</strong></p>
+                <p>The six books on the bookshelf are hidden in a specific order. You need to click on the books in the correct order:<strong style="color:#a220b0;">Sa → M → Ea → Sb → A → Eb</strong></p>
             </div>
         </div>
 
@@ -397,7 +403,7 @@
 <script>
     (function() {
 
-        const CORRECT_ORDER = [3, 1, 4, 2, 6, 5];   // 书本控制顺序
+        const CORRECT_ORDER = [1, 3, 4, 5, 2, 6];   
         const TOTAL_BOOKS = 6;
 
         let currentStep = 0;            
@@ -479,7 +485,7 @@
                     });
                 } else {
 
-                    showFeedback(`✓ Step ${currentStep} correct! Next: Book ${CORRECT_ORDER[currentStep]}`);
+                    showFeedback(`✓ Step ${currentStep} correct! `);
                 }
             } else {
 
